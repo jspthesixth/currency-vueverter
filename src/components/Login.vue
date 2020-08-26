@@ -1,12 +1,8 @@
 <template>
   <div class="container">
     <div class="login-form">
-      <input
-        type="text"
-        name="username"
-        placeholder="Enter your username..."
-        v-model="username"
-      />
+      <h3 v-bind:style="{color: 'red'}">{{warningMessage}}</h3>
+      <input type="text" name="username" placeholder="Enter your username..." v-model="username" />
       <input
         type="password"
         name="password"
@@ -23,7 +19,8 @@ export default {
   data() {
     return {
       username: '',
-      password: ''
+      password: '',
+      warningMessage: '',
     };
   },
   methods: {
@@ -32,18 +29,18 @@ export default {
         method: 'POST',
         headers: {
           Accept: 'application/json',
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           username: this.username,
-          password: this.password
-        })
+          password: this.password,
+        }),
       };
       try {
         const response = await fetch('http://localhost:4000/signin', settings);
         const data = await response.json();
         if (!response.ok) {
-          console.log('Error');
+          this.warningMessage = data.message;
         } else {
           localStorage.setItem('appToken', data.token);
           localStorage.setItem('username', this.username);
@@ -52,8 +49,8 @@ export default {
       } catch (e) {
         console.error(e);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
