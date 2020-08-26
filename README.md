@@ -1,29 +1,17 @@
-# currency-vueverter
+## Currency Vueverter
 
-## Project setup
+### USERNAME: test
+### PASSWORD: test123
 
-```
-npm install
-```
+This repository contains a simple Full Stack Express / Vue application.
 
-### Compiles and hot-reloads for development
+### Installation
 
-```
-npm run serve
-```
+Make sure you have Node.js installed.
 
-### Compiles and minifies for production
+1. git clone https://github.com/jspthesixth/currency-vueverter.git
+2. npm install
+3. npm run dev
 
-```
-npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+####
+Enjoy.
