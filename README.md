@@ -1,9 +1,8 @@
 ## Currency Vueverter
-
-### USERNAME: test
-### PASSWORD: test123
-
 This repository contains a simple Full Stack Express / Vue application.
+
+#### USERNAME: test
+#### PASSWORD: test123
 
 ### Installation
 
